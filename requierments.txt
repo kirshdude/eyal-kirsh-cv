@@ -1,0 +1,10 @@
+google-auth
+google-cloud-bigquery
+google-cloud-secret-manager
+streamlit
+pandas
+openai
+altair
+db-dtypes
+streamlit_option_menu
+streamlit_authenticator
