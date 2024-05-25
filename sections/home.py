@@ -2,7 +2,7 @@ import streamlit as st
 
 name = 'Eyal Kirsh'
 
-def display_introduction(name):
+def display_introduction():
     st.markdown('''<h1 style="text-align: center;">Welcome to {name}'s Interactive CV</h1>'''.format(name=name), unsafe_allow_html=True)
              #f"Welcome to {name}'s Interactive CV")
     st.markdown("""
