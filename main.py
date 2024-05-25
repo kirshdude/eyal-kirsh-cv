@@ -45,3 +45,6 @@ def main():
         if user_input:
             response = chat_with_gpt(user_input)
             st.write(response)
+
+if __name__ == "__main__":
+    main()

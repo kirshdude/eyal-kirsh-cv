@@ -44,6 +44,6 @@ Managed multiple end-to-end AI & Machine Learning projects, resulting in signifi
 def display_cv():
     st.title(professional_header)
     for exp in professional_experiences:
-        st.write(exp['experience'])
+        st.header(exp['experience'])
         st.write(exp['time'])
         st.write(exp['description'])
