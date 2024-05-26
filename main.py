@@ -41,7 +41,7 @@ def main():
         display_contact()
     elif selected == "Chatbot":
         st.title("CV Chatbot")
-        user_input = st.text_input("Ask a question about Eyal's CV:")
+        user_input = st.text_input("Ask any question about Eyal:")
         if user_input:
             response = chat_with_gpt(user_input)
             st.write(response)
