@@ -4,7 +4,7 @@ import os
 
 
 # Default Model Params
-OPEN_AI_MODEL = "gpt-4o"
+OPEN_AI_MODEL = "gpt-3.5-turbo" #"gpt-4o"
 MODEL_TEMPERATURE = 0
 REPLY_MAX_TOKENS = 1000
 

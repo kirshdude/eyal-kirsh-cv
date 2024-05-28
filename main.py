@@ -8,14 +8,14 @@ from sections.professional import display_cv
 from sections.education import display_education
 from sections.skills import display_skills
 from sections.contact import display_contact
-from sections.chatbot import chat_with_gpt
+from sections.chatbot import chat_with_gpt, show_faq
 
 
 # Streamlit app layout
 def main():
     side_bar = {'menu_title': 'Eyal Kirsh CV',
-                'options': ['Home', 'Professional Experience', 'Education', 'Skills & Hobbies', 'Contact & Social', 'Chatbot'],
-                'icons': ['house', 'briefcase', 'book', 'tools', 'phone', 'robot']
+                'options': ['Home', 'Chatbot', 'Professional Experience', 'Contact info'],
+                'icons': ['house', 'robot', 'briefcase', 'phone']
                 }
 
     with st.sidebar:
@@ -31,20 +31,25 @@ def main():
 
     if selected == "Home":
         display_introduction()
+    elif selected == "Chatbot":
+        st.markdown(
+            '''<h1 style="text-align: center; font-family: monospace;">CV Chatbot</h1>''',
+            unsafe_allow_html=True)
+        show_faq()
+        user_input = st.text_input("")
+        send_button = st.button("Get to know Eyal")
+        if send_button:
+            response = chat_with_gpt(user_input)
+            st.write(response)
     elif selected == "Professional Experience":
         display_cv()
     elif selected == "Education":
         display_education()
     elif selected == "Skills & Hobbies":
         display_skills()
-    elif selected == "Contact & Social":
+    elif selected == "Contact info":
         display_contact()
-    elif selected == "Chatbot":
-        st.title("CV Chatbot")
-        user_input = st.text_input("Ask any question about Eyal:")
-        if user_input:
-            response = chat_with_gpt(user_input)
-            st.write(response)
+
 
 if __name__ == "__main__":
     main()

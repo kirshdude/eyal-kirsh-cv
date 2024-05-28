@@ -3,7 +3,7 @@ import streamlit as st
 professional_header = "Professional Experience"
 
 professional_experiences = [{'experience': "Data Scientist, Wix.com",
-                             "time": "**2023-Present**",
+                             "time": "**2022-Present**",
                              "description": """
 Managed multiple end-to-end AI & Machine Learning projects, resulting in significant improvement to the business KPIs.
 - **Marketplace recommendation system** - Partnered with the product team to build a recommendation system- matching web professionals with clients in Wix’s Marketplace, increasing target KPI (projects’ completion rate) by 15%.
@@ -45,5 +45,8 @@ def display_cv():
     st.title(professional_header)
     for exp in professional_experiences:
         st.header(exp['experience'])
-        st.write(exp['time'])
-        st.write(exp['description'])
+        time = exp["time"]
+        st.write('<p style="font-size: large;">{time}</p>'.format(time=time), unsafe_allow_html=True)
+
+        description = exp['description']
+        st.write(description)
