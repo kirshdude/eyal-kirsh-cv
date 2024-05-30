@@ -13,7 +13,7 @@ def create_prompt(all_text, query):
         },
         {
             "role": "user",
-            "content": f"This is the cv: {all_text} please answer the following question: {query}"
+            "content": f"This is the cv: {all_text} please answer the following question: {query}. Please try to answer in a clean and clear manner using bullet points if needed"
         }
     ]
     return main_prompt
@@ -49,7 +49,7 @@ def show_faq():
          </b>
             </p>
         </div>
-        """.format(faq=faq), unsafe_allow_html=True)
+        """, unsafe_allow_html=True)
 
 
     # st.write(faq)

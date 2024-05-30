@@ -9,8 +9,7 @@ Data Scientist Wix.com - 2022-Present
 Managed multiple end-to-end AI & Machine Learning projects, resulting in significant improvement to the business KPIs.
 •	Marketplace recommendation system - Partnered with the product team to build a recommendation system- matching web professionals with clients in Wix’s Marketplace, increasing target KPI (projects’ completion rate) by 15%.
 •	AI products – Took part in internal research and implementation of AI driven applications, such as:
-•	Analytics assistant – Started as internal research and continued as a personal project to help stake holders interact with data without the need of an analyst. Developed using the advanced GPT-3.5 Turbo model and a custom-built RAG framework.
-[GitHub repo]
+•	Analytics assistant – Ongoing work on an internal tool to help stake holders interact with data without the need of an analyst. Developed utilizing an LLM to convert free-text questions into SQL queries, employing Retrieval-Augmented Generation (RAG) techniques for accurate data extraction and self-validation. Additionally, implemented an LLM-based graph creator that generates Python code for visualizations, ensuring precise and insightful analysis.[GitHub repo]
 •	Templates quality validation- Ongoing research to validate templates’ visual and textual quality before approving it for selling in the Templates Marketplace. The research includes the use of advanced image and text models along with classical ML models.
 •	Professional user detection- Implemented a Catboost model with BERT LLM to increase the detection accuracy of professional users (Design agencies & freelancers) by 25% and reducing detection time to minutes from signup.
 
@@ -39,6 +38,12 @@ Naya College – Practical Data science- 2022- 2023
 •	Comprehensive course covering the entire data science lifecycle 
 •	Completed projects in regression, classification and NLP
 
+Multiple Udemy and corsera courses such as: 
+* Deep learning 
+* Recommendation systems 
+* RAG 
+* Prompt engineering 
+
 Details 
 Tel Aviv, Israel  
 +972-525652543
@@ -48,17 +53,40 @@ GitHub: https://github.com/kirshdude?tab=repositories
 
 Skills
  
-o	Python, SQL, Excel, TensorFlow, PyTorch, Git
-o	Classification, Regression, NLP, DL
+o	Python, SQL, Excel, TensorFlow, PyTorch, Git, LangChain, scikit-learn
+o	Classification, Regression, NLP, DL, Recommendation systems 
+o   Management - managed teams and groups of up to 100 workers with excellence. 
 o	Excellent communication skills
 o	Native English & Hebrew
 
 
 Activities & Interests
 
+o	Entrepreneurship- created multiple side projects and small businesses 
+o	Dog frisbee competitions- won third place in long distance frisbee compatition with my dog Chilli
+o   Surfing
+o   Math- love learning and teaching math and statistics 
 o	Tennis enthusiast 
-o	Entrepreneurship
-o	Dog frisbee competitions
+o	Building cool products  
+o	Running
+o	Ice baths 
+
+
+Other facts:
+o	Married for 2 years 
+o	Have a dog named Chilli 
+o	My parents are from Canada and made Aliya right before I was born 
+o	I did "Shnat sherut" (a year of service) through Maccabi Tzair which is a youth movement like the scouts- there I ran a branch of the movement 
+o	I got 693 in the psychometric test (145 in the math part) 
+o   I worked for a year in Australia as a farmer after the Army 
+
+
+
+
+
+
+
+
 
 Eyals favorite quote:
 “Live as if you were to die tomorrow. Learn as if you were to live forever”.

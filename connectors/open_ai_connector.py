@@ -4,13 +4,13 @@ import os
 
 
 # Default Model Params
-OPEN_AI_MODEL = "gpt-3.5-turbo" #"gpt-4o"
+
 MODEL_TEMPERATURE = 0
 REPLY_MAX_TOKENS = 1000
 
 
 class OpenaiConnector:
-    def __init__(self, api_key: str) -> None:
+    def __init__(self, api_key: str, model: str) -> None:
         """
         Initializes an instance of OpenaiManager.
 
@@ -22,6 +22,7 @@ class OpenaiConnector:
         self.total_tokens_consumed = 0
         from openai import OpenAI
         self.client = OpenAI()
+        self.model = model
 
     def update_cost(self, tokens_consumed: int) -> None:
         """
@@ -34,7 +35,6 @@ class OpenaiConnector:
 
     def get_gpt_reply(self,
                       prompt: List[Dict[str, str]],
-                      model: str = OPEN_AI_MODEL,
                       temperature: float = MODEL_TEMPERATURE,
                       max_tokens: int = REPLY_MAX_TOKENS) -> str:
         """Generates a GPT reply based on the given prompt.
@@ -53,7 +53,7 @@ class OpenaiConnector:
         """
 
         response = self.client.chat.completions.create(
-            model=model,
+            model=self.model,
             messages=prompt,
             temperature=temperature,
             max_tokens=max_tokens,
