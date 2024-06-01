@@ -16,6 +16,8 @@ from sections.job_matching import JobMatcher
 
 # Streamlit app layout
 def main():
+    st.set_option('server.enableFileWatcher', False)
+
     side_bar = {'menu_title': 'Eyal Kirsh CV',
                 'options': ['Home', 'Chat with Eyal', 'Professional Experience', 'Role Match', 'Contact info'],
                 'icons': ['house', 'robot', 'briefcase', 'robot', 'phone']
