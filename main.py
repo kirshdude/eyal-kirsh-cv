@@ -36,17 +36,13 @@ def main():
         display_introduction()
     elif selected == "Chatbot":
         st.markdown(
-            '''<h1 style="text-align: center; font-family: monospace;">CV Chatbot</h1>''',
+            '''<h1 style="text-align: center; font-family: monospace;">Chat with Eyal Kirsh </h1>''',
             unsafe_allow_html=True)
 
         chat_bot_class = ChatBot()
         st.markdown("")
         chat_bot_class.run_chat()
-        # user_input = st.text_input("What would you like to know?")
-        # send_button = st.button("Get to know Eyal")
-        # if send_button:
-        #     response = chat_with_gpt(user_input)
-        #     st.write(response)
+
     elif selected == "Professional Experience":
         display_cv()
     # elif selected == "Education":
@@ -57,31 +53,17 @@ def main():
         display_contact()
 
     elif selected == "Matching score":
-        html_code = """
-        <div style="display: flex; justify-content: left; padding: 15px; border-radius: 10px;">
-            <input type="text" id="largeInput" style="width: 500px; height: 10000px; font-size: 20px; padding: 15px; border-radius: 10px;" placeholder="Enter your text here">
-        </div>
-        <script>
-            // Get Streamlit to capture the input value
-            const largeInput = document.getElementById('largeInput');
-            largeInput.addEventListener('input', function() {
-                window.parent.postMessage({isStreamlitMessage: true, type: 'largeInputValue', value: largeInput.value}, '*');
-            });
-        </script>
-        """
+        JobMatcher.intro()
+        st.markdown("")
+        txt = st.text_area("Paste the job description here:",height=300, placeholder="")
 
-        # Display the custom HTML
-        components.html(html_code, height=300)
-
-        job_description = st.text_input("Paste the job description here:")
+        # job_description = st.text_input("Paste the job description here:")
         send_button = st.button("Get score")
         if send_button:
             job_seekers_info = all_text
-            matcher = JobMatcher(job_description, job_seekers_info)
-            st.markdown(str(matcher.matching_scores))
-
-
-
+            matcher = JobMatcher(txt, job_seekers_info)
+            matcher.show_matching_gouge()
+            # st.markdown(str(matcher.get_matching_scores()))
 
 
 if __name__ == "__main__":

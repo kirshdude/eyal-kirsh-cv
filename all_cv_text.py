@@ -4,7 +4,7 @@ AI enthusiast, passionate about building products that improve life & business
 
 Professional Experience
  
-Data Scientist Wix.com - 2022-Present   
+Data Scientist Wix.com - 2022-present (2024)   
 
 Managed multiple end-to-end AI & Machine Learning projects, resulting in significant improvement to the business KPIs.
 •	Marketplace recommendation system - Partnered with the product team to build a recommendation system- matching web professionals with clients in Wix’s Marketplace, increasing target KPI (projects’ completion rate) by 15%.

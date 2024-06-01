@@ -47,5 +47,10 @@ def display_cv():
         time = exp["time"]
         st.write('<p style="font-size: large;">{time}</p>'.format(time=time), unsafe_allow_html=True)
 
-        description = exp['description']
-        st.write(description)
+        see_more = st.button("See more", key=exp)
+        if see_more:
+            description = exp['description']
+            st.write(description)
+            see_less = st.button("See less", key=exp.values)
+            if see_less:
+                st.write('')

@@ -24,13 +24,19 @@ class ChatBot:
         self.job_seekers_info = all_text
         self.chain = self.create_chain()
         self.greeting_message = \
-""" Hey ! I'm here to help you get any additional information about me that you can't find in my CV \n
-    Here are some ideas of questions you can ask about me: \n
-    - What are your Professional strengths?\n
-    - What education do you have?\n
-    - Why would you be/not be a good fit for role X? \n
-    - What is your phone number?\n
-    - Describe yourself in 3 sentences\n
+""" Hey ! I'm here to help you get any additional information about me that you can't find in my CV 
+    
+    Here are some ideas of questions you can ask about me: 
+    
+    1. What are your Professional strengths?
+    
+    2. What education do you have?
+    
+    3. Why would you be/not be a good fit for role X? 
+    
+    4. What is your phone number?
+    
+    5. Describe yourself in 3 sentences
 """
 
 
@@ -54,7 +60,7 @@ class ChatBot:
         prompt = [("system", "you are Eyal, and an employer will ask you questions about yourself, answer in a respecful, informal and humble manner"),
                    ("user", f"This is the information about you: {self.job_seekers_info}" + \
                               """please answer the following question about yourself: {question}. 
-                              Please try to answer in a clean, clear and concise manner. Try using bullet points 
+                              Please try to answer in a clean, clear and concise manner without providing unnecessary information. Try using bullet points 
                               Make it sound that you are a human talking about yourself and not a bot
                               Here is the previous chat history {chat_history}""")
                 ]
@@ -102,15 +108,16 @@ class ChatBot:
     def run_chat(self):
         # self.show_faq()
         with self.container:
-            self.user_query = st.text_input("", placeholder="Ask me anything (:", key='input')
-            self.submit_button = st.button("Send")
-
-            # self.submit_button = st.form_submit_button(label='Send')
+            with st.form(key='input_form', clear_on_submit=True):
+                self.user_query = st.text_input("", placeholder="Ask me anything (:", key='input')
+                # self.submit_button = st.button("Send")
+                self.submit_button = st.form_submit_button(label='Send')
 
             if self.submit_button and self.user_query:
                 output = self.chat_with_gpt()
                 self.session_state['past'].append(self.user_query)
                 self.session_state['generated'].append(output)
+                self.session_state['user_input'] = ''
 
             if self.session_state['generated']:
                 with self.response_container:

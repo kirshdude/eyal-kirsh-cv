@@ -8,10 +8,11 @@ def display_introduction():
     st.markdown("""
         <div style="background-color: #f9f9f9; padding: 15px; border-radius: 10px;">
             <p style="text-align: left; font-size: large; color: black; font-family: monospace;">
-                This app is meant to help you, the employer, get to know me better.<br>
+                Hi! I'm Eyal Kirsh a data scientist passionate about building cool products, and I'm highly motivated to work in a startup. </br>
                 <br>
-                I'll just start off by saying that I'm a data scientist passionate about building cool products, <br>
-                and I'm highly motivated to work in a startup
-            </p>
+                This app is meant to help you, the employer, get to know me better.</br> 
+                <br> 
+                Enjoy! </br> 
+                 </p>
         </div>
         """, unsafe_allow_html=True)
