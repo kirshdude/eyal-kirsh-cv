@@ -3,12 +3,10 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import streamlit.components.v1 as components
 
-
 import sections
 from sections.home import display_introduction
 from sections.professional import display_cv
-from sections.education import display_education
-from sections.skills import display_skills
+
 from sections.contact import display_contact
 from sections.chatbot import ChatBot
 from sections.job_matching import JobMatcher
@@ -16,8 +14,6 @@ from sections.job_matching import JobMatcher
 
 # Streamlit app layout
 def main():
-    st.set_option('server.enableFileWatcher', False)
-
     side_bar = {'menu_title': 'Eyal Kirsh CV',
                 'options': ['Home', 'Chat with Eyal', 'Professional Experience', 'Role Match', 'Contact info'],
                 'icons': ['house', 'robot', 'briefcase', 'robot', 'phone']
