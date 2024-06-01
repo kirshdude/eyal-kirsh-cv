@@ -10,7 +10,7 @@ from sections.professional import display_cv
 from sections.education import display_education
 from sections.skills import display_skills
 from sections.contact import display_contact
-from sections.chatbot import chat_with_gpt, show_faq
+from sections.chatbot import ChatBot
 from sections.job_matching import JobMatcher
 
 
@@ -38,13 +38,15 @@ def main():
         st.markdown(
             '''<h1 style="text-align: center; font-family: monospace;">CV Chatbot</h1>''',
             unsafe_allow_html=True)
-        show_faq()
+
+        chat_bot_class = ChatBot()
         st.markdown("")
-        user_input = st.text_input("What would you like to know?")
-        send_button = st.button("Get to know Eyal")
-        if send_button:
-            response = chat_with_gpt(user_input)
-            st.write(response)
+        chat_bot_class.run_chat()
+        # user_input = st.text_input("What would you like to know?")
+        # send_button = st.button("Get to know Eyal")
+        # if send_button:
+        #     response = chat_with_gpt(user_input)
+        #     st.write(response)
     elif selected == "Professional Experience":
         display_cv()
     # elif selected == "Education":
