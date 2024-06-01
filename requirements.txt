@@ -2,9 +2,17 @@ google-auth
 google-cloud-bigquery
 google-cloud-secret-manager
 streamlit
+streamlit_chat
 pandas
 openai
 altair
 db-dtypes
 streamlit_option_menu
 streamlit_authenticator
+plotly
+langchain
+langchain_core
+langchain_openai
+langchain_core
+
+
