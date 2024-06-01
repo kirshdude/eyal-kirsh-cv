@@ -53,7 +53,7 @@ GitHub: https://github.com/kirshdude?tab=repositories
 
 Skills
  
-o	Python, SQL, Excel, TensorFlow, PyTorch, Git, LangChain, scikit-learn
+o	Python, SQL, Excel, TensorFlow, PyTorch, Git, LangChain, scikit-learn, LlamaIndex
 o	Classification, Regression, NLP, DL, Recommendation systems 
 o   Management - managed teams and groups of up to 100 workers with excellence. 
 o	Excellent communication skills

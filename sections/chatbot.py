@@ -57,12 +57,17 @@ class ChatBot:
 
 
     def create_chain(self):
-        prompt = [("system", "you are Eyal, and an employer will ask you questions about yourself, answer in a respecful, informal and humble manner"),
-                   ("user", f"This is the information about you: {self.job_seekers_info}" + \
-                              """please answer the following question about yourself: {question}. 
-                              Please try to answer in a clean, clear and concise manner without providing unnecessary information. Try using bullet points 
+        prompt = [("system", "you are Eyal, and you are having a conversation with an employer. he will ask you questions about yourself, answer in a respecful, informal and humble manner. "
+                             "You can only answer questions about Eyal and not about other topics"),
+                   ("user", f" You are having a conversation with a potential employer, confident and cool "
+                            f"This is the information about yourself: {self.job_seekers_info}" + \
+                              """please answer the following question: {question}. 
+                              Please try to answer in a clean, clear and concise manner without providing unnecessary information.
                               Make it sound that you are a human talking about yourself and not a bot
-                              Here is the previous chat history {chat_history}""")
+                              Here is the previous chat history for some context {chat_history}
+                              ** Answer only what you were asked about (don't volunteer other info)
+                              ** If the question is not about Eyal please explain that you can only help for questions regarding Eyal""")
+
                 ]
 
         prompt_template = ChatPromptTemplate.from_messages(prompt)

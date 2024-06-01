@@ -17,7 +17,7 @@ from sections.job_matching import JobMatcher
 # Streamlit app layout
 def main():
     side_bar = {'menu_title': 'Eyal Kirsh CV',
-                'options': ['Home', 'Chatbot', 'Professional Experience', 'Matching score', 'Contact info'],
+                'options': ['Home', 'Chat with Eyal', 'Professional Experience', 'Role Match', 'Contact info'],
                 'icons': ['house', 'robot', 'briefcase', 'robot', 'phone']
                 }
 
@@ -29,14 +29,16 @@ def main():
             menu_icon="cast",
             default_index=0,
         )
+
     # st.sidebar.title("Navigation")
     # page = st.sidebar.radio("Go to", ["CV", "Chatbot"])
 
     if selected == "Home":
+        st.image('Linkedin_photo.jpg', width=277)
         display_introduction()
-    elif selected == "Chatbot":
+    elif selected == "Chat with Eyal":
         st.markdown(
-            '''<h1 style="text-align: center; font-family: monospace;">Chat with Eyal Kirsh </h1>''',
+            '''<h1 style="text-align: center; font-family: monospace;">Chat with Eyal </h1>''',
             unsafe_allow_html=True)
 
         chat_bot_class = ChatBot()
@@ -52,7 +54,7 @@ def main():
     elif selected == "Contact info":
         display_contact()
 
-    elif selected == "Matching score":
+    elif selected == "Role Match":
         JobMatcher.intro()
         st.markdown("")
         txt = st.text_area("Paste the job description here:",height=300, placeholder="")
@@ -62,7 +64,10 @@ def main():
         if send_button:
             job_seekers_info = all_text
             matcher = JobMatcher(txt, job_seekers_info)
+            # try:
             matcher.show_matching_gouge()
+            # except:
+            #     st.header("Seems we ran in to a problem, let's try this again")
             # st.markdown(str(matcher.get_matching_scores()))
 
 
