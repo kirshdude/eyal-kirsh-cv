@@ -3,8 +3,10 @@ import os
 
 from google.cloud import secretmanager
 from google.oauth2 import service_account
+from credentials import project_id
 
-PROJECT_ID = 'eyalkirshcv'
+
+PROJECT_ID = project_id
 
 
 class SecretManagerConnector:

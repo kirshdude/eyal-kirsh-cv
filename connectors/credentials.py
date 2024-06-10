@@ -11,3 +11,5 @@ service_account_json = '''{
   "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/eyalkirsh-cv%40eyalkirshcv.iam.gserviceaccount.com",
   "universe_domain": "googleapis.com"
 }'''
+
+project_id = 'eyalkirshcv'
